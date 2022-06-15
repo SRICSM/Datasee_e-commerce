@@ -1,8 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+// import store from './store'
+
+// 引入路由 Vue-router
+import VueRouter from 'vue-router'
 import axios from 'axios'
+
+// 引入全局样式文件
+import './assets/css/global.css'
+
+
+Vue.use(VueRouter)
 
 // 请求基准路径配置
 axios.defaults.baseURL = 'http://localhost:8888/api'
@@ -19,4 +28,5 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
+  router: router,
 }).$mount('#app')
